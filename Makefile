@@ -68,3 +68,5 @@ clean:
 
 # A build server's entry point: clean, verify, then build and test.
 ci: clean check test
+count: build ## report how many words were built
+	@wc -w $(OUTPUTS) | tail -1
